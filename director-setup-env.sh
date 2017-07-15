@@ -20,3 +20,5 @@ bosh -n log-in
 bosh -n update-cloud-config cloud-config.yml
 bosh -n cloud-config
 
+set +x
+
