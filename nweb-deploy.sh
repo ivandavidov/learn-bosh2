@@ -2,6 +2,10 @@
 
 set -e
 
+export BOSH_ENVIRONMENT=vbox
+export BOSH_CLIENT=admin
+export BOSH_CLIENT_SECRET=`bosh int creds.yml --path /admin_password`
+
 git submodule update --init nweb-release
 
 cd nweb-release
