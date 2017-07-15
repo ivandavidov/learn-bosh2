@@ -11,7 +11,7 @@ git submodule update --init nweb-release
 cd nweb-release
 
 rm -rf .dev_builds
-rm -rf dev_releses
+rm -rf dev_releases
 
 bosh -n -d nweb delete-deployment
 bosh -n delete-release nweb-release
