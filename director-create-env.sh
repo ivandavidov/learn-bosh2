@@ -1,10 +1,15 @@
 #!/bin/bash
 
+set -e
+
+git submodule update --init bosh-deployment
+
 rm -f state.json
 rm -f creds.yml
 rm -f jumpbox.key
 
-bosh create-env bosh-deployment/bosh.yml \
+bosh create-env \
+  bosh-deployment/bosh.yml \
   --state state.json \
   -o bosh-deployment/virtualbox/cpi.yml \
   -o bosh-deployment/virtualbox/outbound-network.yml \

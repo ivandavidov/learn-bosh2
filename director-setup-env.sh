@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 bosh -e 192.168.50.6 \
   alias-env vbox \
   --ca-cert <(bosh int creds.yml --path /director_ssl/ca)
@@ -8,7 +10,7 @@ bosh int creds.yml \
   --path /jumpbox_ssh/private_key \
   > jumpbox.key
 
-chmod 600 ~/vbox/jumpbox.key
+chmod 600 jumpbox.key
 
 export BOSH_ENVIRONMENT=vbox
 export BOSH_CLIENT=admin
