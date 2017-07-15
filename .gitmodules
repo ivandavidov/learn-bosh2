@@ -1,0 +1,6 @@
+[submodule "nweb-release"]
+	path = nweb-release
+	url = https://github.com/ivandavidov/nweb-release
+[submodule "bosh-deployment"]
+	path = bosh-deployment
+	url = https://github.com/cloudfoundry/bosh-deployment
