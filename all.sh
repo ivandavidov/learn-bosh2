@@ -15,7 +15,7 @@ git submodule update --init bosh-deployment
 
 # Check whether the BOSH director is running. If there is no
 # reposne, the assumption is that the bosh-lite VirtualBox VM
-# is not present. You can delete al obsolete VMs manually by
+# is not present. You can delete all obsolete VMs manually by
 # using the 'virtualbox' UI. 
 if [ "`ping -c 1 192.168.50.6 | grep -i '1 received'`" = "" ]
 then
@@ -65,7 +65,7 @@ then
     --path /jumpbox_ssh/private_key \
     > jumpbox.key
 
-  # For security we allow the provate key to be accessible only
+  # For security we allow the private key to be accessible only
   # by the currently logged user.
   chmod 600 jumpbox.key
 fi
@@ -150,7 +150,7 @@ then
       https://bosh.io/d/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent
   fi
 
-  # We use the already downloaded Ubuntu stemcell and we upload i in the
+  # We use the already downloaded Ubuntu stemcell and we upload it in the
   # director environment.
   bosh -n upload-stemcell stemcell-ubuntu-trusty.tgz
 fi
@@ -171,8 +171,7 @@ bosh -n upload-release
 # Use the 'manifest.yml' manifest file in order to deploy the 'nweb' release.
 bosh -n -d nweb deploy manifest.yml
 
-# We should be able to see the 'nWeb' instance and its process state should be
-# 'running'.
+# We should be able to see the 'nWeb' instance as 'running'.
 bosh vms
 
 #############################################################################
@@ -189,7 +188,7 @@ bosh vms
 #                                                                           #
 #############################################################################
 
-# And finally we should be able to access the nWeb seb server on IP address
+# And finally we should be able to access the nWeb web server on IP address
 # 10.10.0.10 on port 8080.
 firefox 10.10.0.10:8080
 curl 10.10.0.10:8080
