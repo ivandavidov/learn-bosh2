@@ -15,7 +15,7 @@ This project demosntstrates the following:
 
 ## Tutorial
 
-Long story short - run the ``all.sh`` script, sit down and observe the output. Also, take a look at the script and read the comments. They are quite descriptive. You won't learn anything if you just run the script - you actually need to go through the script, examine the commands and experiment.
+Long story short - run the [all.sh](https://github.com/ivandavidov/learn-bosh2/blob/master/all.sh) script, sit down and observe the output. Also, take a look at the script and read the comments. They are quite descriptive. You won't learn anything if you just run the script - you actually need to go through the script, examine the commands and experiment.
 
 At some point you may want to save your work. The bosh-lite VM runs in headless mode and by default you don't get UI. You can manually run ``virtualbox`` and then choose Machine => Close => Save State. Then you can run the VM by choosing Machine => Start => Headless Start.
 
