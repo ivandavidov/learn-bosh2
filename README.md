@@ -7,7 +7,7 @@ This project demosntstrates the following:
 
 ## Prerequisites
 
-* Linux OS - all scripts are designed to run on Linux. The scripts have been tested on [Linux Minut](http://linuxmint.com) but they should work fine on pretty much all major Linux distributions.
+* Linux OS - all scripts are designed to run on Linux. The scripts have been tested on [Linux Mint](http://linuxmint.com) but they should work fine on pretty much all major Linux distributions.
 * Sudo - in order to create routing rule between your network and the nWeb release network via the BOSH director.
 * [VirtualBox](https://virtualbox.org) - you need at least version 5.0.
 * [BOSH CLI v2](https://bosh.io/docs/cli-v2.html#install) - the CLI should be accessible via ``bosh``.
